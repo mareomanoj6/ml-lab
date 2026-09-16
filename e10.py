@@ -20,6 +20,13 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.2f}")
 
+w = clf.coef_[0]
+b = clf.intercept_[0]
+margin = 2.0 / np.linalg.norm(w)
+print(f"Weight vector (w): {w}")
+print(f"Bias (b): {b:.4f}")
+print(f"Margin (2/||w||): {margin:.4f}")
+
 plt.figure(figsize=(8, 6))
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Paired, edgecolors='k')
 
