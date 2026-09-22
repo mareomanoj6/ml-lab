@@ -1,2 +1,3 @@
 - [ ] Find and Download Datasets for experiments
+- [ ] Parquet to CSV Converter or directly in code
 - [ ] Create python code files for all experiments.
