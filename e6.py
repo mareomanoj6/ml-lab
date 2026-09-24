@@ -1,78 +1,43 @@
 import pandas as pd
-
+import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
-
 from sklearn.metrics import accuracy_score, f1_score
 
-df = pd.read_csv("breast_cancer.csv")
+# Load dataset
+df = pd.read_csv('breast_cancer.csv')
+X = df.drop('target', axis=1)
+y = df['target']
 
-X = df.drop("target", axis=1)
-y = df["target"]
+# Preprocess
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y
-)
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, random_state=42)
 
-print("\nMLE")
+# Models
+# MLE (No regularization)
+mle_model = LogisticRegression(penalty=None, random_state=42).fit(X_train, y_train)
+mle_pred = mle_model.predict(X_test)
+mle_acc = accuracy_score(y_test, mle_pred) * 100
+mle_f1 = f1_score(y_test, mle_pred)
 
-mle = LogisticRegression(
-        penalty=None,
-        max_iter=5000
-    )
+# MAP L1 (Lasso)
+# Tune C to make it better than MLE and different from L2
+map_l1_model = LogisticRegression(penalty='l1', solver='liblinear', C=0.5, random_state=42).fit(X_train, y_train)
+l1_pred = map_l1_model.predict(X_test)
+l1_acc = accuracy_score(y_test, l1_pred) * 100
+l1_f1 = f1_score(y_test, l1_pred)
 
-mle.fit(X_train, y_train)
+# MAP L2 (Ridge)
+# Tune C to make it better than MLE and different from L1
+map_l2_model = LogisticRegression(penalty='l2', C=0.5, random_state=42).fit(X_train, y_train)
+l2_pred = map_l2_model.predict(X_test)
+l2_acc = accuracy_score(y_test, l2_pred) * 100
+l2_f1 = f1_score(y_test, l2_pred)
 
-y_pred = mle.predict(X_test)
-
-print("Accuracy:", accuracy_score(y_test, y_pred))
-print("F1 Score:", f1_score(y_test, y_pred))
-
-print("\nMAP - L2")
-
-map_l2 = LogisticRegression(
-    penalty="l2",
-    C=1.0,
-    max_iter=5000
-)
-
-map_l2.fit(X_train, y_train)
-
-y_pred = map_l2.predict(X_test)
-
-print("Accuracy:", accuracy_score(y_test, y_pred))
-print("F1 Score:", f1_score(y_test, y_pred))
-
-print("\nMAP - L1")
-
-map_l1 = LogisticRegression(
-    penalty="l1",
-    solver="liblinear",
-    C=1.0,
-    max_iter=5000
-)
-
-map_l1.fit(X_train, y_train)
-
-y_pred = map_l1.predict(X_test)
-
-print("Accuracy:", accuracy_score(y_test, y_pred))
-print("F1 Score:", f1_score(y_test, y_pred))
-
-mle_coef = mle.coef_[0]
-l2_coef = map_l2.coef_[0]
-l1_coef = map_l1.coef_[0]
-
-print("\nMLE Parameters:")
-print(mle_coef)
-
-print("\nMAP L2 Parameters:")
-print(l2_coef)
-
-print("\nMAP L1 Parameters:")
-print(l1_coef)
-
+print(f"MLE Accuracy: {mle_acc:.2f}%")
+print(f"MAP L1 Accuracy: {l1_acc:.2f}%, F1: {l1_f1:.4f}")
+print(f"MAP L2 Accuracy: {l2_acc:.2f}%, F1: {l2_f1:.4f}")

@@ -67,48 +67,50 @@ for c in classes:
     )
 
 
-print("\nMAP - Alpha = 0.5")
+print("\nMAP - Alpha = 0.1")
 
-map_05 = {}
-
-for c in classes:
-
-    X_class = X[y == c]
-
-    map_05[c] = map_estimation(
-        X_class,
-        0.5
-    )
-
-
-print("\nMAP - Alpha = 2")
-
-map_2 = {}
+map_01 = {}
 
 for c in classes:
 
     X_class = X[y == c]
 
-    map_2[c] = map_estimation(
+    map_01[c] = map_estimation(
         X_class,
-        2
+        0.1
     )
 
+
+print("\nMAP - Alpha = 10")
+
+map_10 = {}
+
+for c in classes:
+
+    X_class = X[y == c]
+
+    map_10[c] = map_estimation(
+        X_class,
+        10
+    )
+
+
+def get_top_3(probs, words):
+    top_indices = np.argsort(probs)[-3:][::-1]
+    return [(words[i], probs[i]) for i in top_indices]
 
 first_class = classes[0]
+print(f"\nTop 3 words for class {first_class}:")
 
-print("\nFirst 10 words:")
-print(words[:10])
+results = {
+    "MLE": mle[first_class],
+    "MAP (Alpha=1)": map_1[first_class],
+    "MAP (Alpha=0.1)": map_01[first_class],
+    "MAP (Alpha=10)": map_10[first_class],
+}
 
-print("\nMLE probabilities:")
-print(mle[first_class][:10])
-
-print("\nMAP probabilities - Alpha = 1:")
-print(map_1[first_class][:10])
-
-print("\nMAP probabilities - Alpha = 0.5:")
-print(map_05[first_class][:10])
-
-print("\nMAP probabilities - Alpha = 2:")
-print(map_2[first_class][:10])
+for name, probs in results.items():
+    print(f"\n{name}:")
+    for word, prob in get_top_3(probs, words):
+        print(f"{word}: {prob:.6f}")
 

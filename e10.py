@@ -6,7 +6,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 df = pd.read_csv('iris.csv')
-df = pd.read_csv('iris.csv')
 df['target'] = (df['species'] == 'setosa').astype(int)
 
 X = df[['sepal length (cm)', 'sepal width (cm)']].values
@@ -40,7 +39,7 @@ YY, XX = np.meshgrid(yy, xx)
 xy = np.vstack([XX.ravel(), YY.ravel()]).T
 Z = clf.decision_function(xy).reshape(XX.shape)
 
-ax.contourf(XX, YY, Z, levels=[-1, 0, 1], alpha=0.8, colors=['red', 'white', 'blue'])
+ax.contour(XX, YY, Z, levels=[0], colors='red')
 plt.xlabel('Sepal length')
 plt.ylabel('Sepal width')
 plt.title('Linear SVM Decision Boundary (Setosa vs Non-Setosa)')
