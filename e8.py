@@ -1,11 +1,11 @@
+import time
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
-import time
 
 def run_experiment():
-    df = pd.read_csv('fashion-mnist.csv')
+    df = pd.read_parquet('fashion-mnist.parquet')
     
     X = df.drop('label', axis=1).values / 255.0
     y = df['label'].values

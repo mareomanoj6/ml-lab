@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 
-df = pd.read_csv('fashion-mnist.csv')
+df = pd.read_parquet('fashion-mnist.parquet')
 
 X = df.drop('label', axis=1).values / 255.0
 y = df['label'].values
