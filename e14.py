@@ -14,8 +14,8 @@ def run_experiment():
     # Hierarchical
     hc = AgglomerativeClustering(n_clusters=5).fit(X_scaled)
 
-    print(f"K-means Silhouette: {silhouette_score(X_scaled, km.labels_):.2f}")
-    print(f"Hierarchical Silhouette: {silhouette_score(X_scaled, hc.labels_):.2f}")
+    print(f"K-means Silhouette: {silhouette_score(X_scaled, km.labels_):.5f}")
+    print(f"Hierarchical Silhouette: {silhouette_score(X_scaled, hc.labels_):.5f}")
 
     plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
@@ -31,8 +31,6 @@ def run_experiment():
     plt.ylabel('Spending Score (scaled)')
     
     plt.tight_layout()
-    plt.savefig('e14.png')
-    plt.close()
-
+    plt.show()
 if __name__ == "__main__":
     run_experiment()

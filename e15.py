@@ -2,10 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
+from sklearn.preprocessing import StandardScaler
 
 def run_experiment():
     df = pd.read_csv('digits.csv')
     X = df.drop('target', axis=1)
+    X = StandardScaler().fit_transform(X)
     
     inertias = []
     silhouettes = []
@@ -17,7 +19,7 @@ def run_experiment():
         sil = silhouette_score(X, km.labels_)
         inertias.append(inertia)
         silhouettes.append(sil)
-        print(f"K={k} Inertia: {inertia:.2f}, Silhouette: {sil:.2f}")
+        print(f"K={k} Inertia: {inertia:.4f}, Silhouette: {sil:.4f}")
     
     plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
@@ -33,8 +35,7 @@ def run_experiment():
     plt.ylabel('Silhouette Score')
     
     plt.tight_layout()
-    plt.savefig('e15.png')
-    plt.close()
+    plt.show()
 
 if __name__ == "__main__":
     run_experiment()

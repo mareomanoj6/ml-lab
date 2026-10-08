@@ -12,7 +12,7 @@ def run_experiment():
 
     for act in ['logistic', 'relu', 'tanh']:
         mlp = MLPClassifier(activation=act, max_iter=5).fit(X_train, y_train)
-        print(f"Act {act} Accuracy: {accuracy_score(y_test, mlp.predict(X_test)):.2f}")
+        print(f"Act {act} Accuracy: {accuracy_score(y_test, mlp.predict(X_test)):.4f}")
 
 if __name__ == "__main__":
     run_experiment()
