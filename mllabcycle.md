@@ -87,7 +87,7 @@ Implement the K-Nearest Neighbors (KNN) algorithm for image classification using
 ---
 
 ## Experiment 9
-Implement a Decision Tree classifier using the ID3 algorithm to segment customers based on their purchasing behavior using the Online Retail dataset. Analyze the tree structure and discuss the feature importance.
+Implement a Decision Tree classifier using the ID3 algorithm to segment customers based on their purchasing behavior using the Iris dataset. Analyze the tree structure and discuss the feature importance.
 
 ### Tasks
 * Load and preprocess the Online Retail dataset.
