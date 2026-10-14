@@ -193,25 +193,3 @@ Investigate the bias-variance tradeoff using polynomial regression on the Boston
 * Implement polynomial regression with varying degrees.
 * Plot training and validation errors for each degree.
 * Discuss the bias-variance tradeoff and its impact on model performance.
-
----
-
-## Experiment 19
-Implement and compare Logistic Regression and Decision Trees on the Adult Income dataset for predicting income levels. Evaluate both models based on performance metrics and interpretability.
-
-### Tasks
-* Load and preprocess the Adult Income dataset.
-* Implement both Logistic Regression and Decision Trees.
-* Compare the models based on metrics such as accuracy, precision, recall, and F1-score.
-* Discuss the interpretability of both models and their suitability for the dataset.
-
----
-
-## Experiment 20
-Implement and perform hyperparameter tuning for a neural network on the Fashion MNIST dataset. Experiment with different learning rates, batch sizes, and epochs, and discuss the impact on model performance.
-
-### Tasks
-* Load and preprocess the Fashion MNIST dataset.
-* Experiment with different hyperparameters (learning rate, batch size, epochs).
-* Train and evaluate the network.
-* Discuss how hyperparameter choices affect model performance.
