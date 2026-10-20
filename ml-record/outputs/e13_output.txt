@@ -1,0 +1,9 @@
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
+  warnings.warn(
+Act logistic Accuracy: 0.9343
+Act relu Accuracy: 0.9589
+Act tanh Accuracy: 0.9528

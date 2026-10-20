@@ -27,4 +27,3 @@ for arch in architectures:
     mlp.fit(X_train_scaled, y_train)
     y_pred = mlp.predict(X_test_scaled)
     print(f"Architecture {arch}: Accuracy = {accuracy_score(y_test, y_pred):.4f}")
-

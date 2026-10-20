@@ -54,4 +54,3 @@ print("Accuracy:", accuracy_score(y_test, y_pred_scaled))
 print("Precision:", precision_score(y_test, y_pred_scaled))
 print("Recall:", recall_score(y_test, y_pred_scaled))
 print("F1 Score:", f1_score(y_test, y_pred_scaled))
-

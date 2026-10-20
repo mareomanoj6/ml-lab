@@ -1,0 +1,31 @@
+
+MLE
+MLE estimation completed.
+
+MAP - Alpha = 1
+
+MAP - Alpha = 0.1
+
+MAP - Alpha = 10
+
+Top 3 words for class 0:
+
+MLE:
+the: 0.049970
+of: 0.029574
+to: 0.028463
+
+MAP (Alpha=1):
+the: 0.029853
+of: 0.017670
+to: 0.017006
+
+MAP (Alpha=0.1):
+the: 0.046815
+of: 0.027707
+to: 0.026666
+
+MAP (Alpha=10):
+the: 0.006464
+of: 0.003829
+to: 0.003686

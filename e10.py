@@ -44,4 +44,3 @@ plt.xlabel('Sepal length')
 plt.ylabel('Sepal width')
 plt.title('Linear SVM Decision Boundary (Setosa vs Non-Setosa)')
 plt.show()
-

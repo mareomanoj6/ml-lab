@@ -49,7 +49,6 @@ print("\nGradient Descent")
 print("MSE:", mean_squared_error(y_test, y_pred))
 print("R2:", r2_score(y_test, y_pred))
 
-
 x_plot = np.linspace(
     X.min(),
     X.max(),

@@ -12,7 +12,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 clf = DecisionTreeClassifier(criterion='entropy', random_state=42)
 clf.fit(X_train, y_train)
-
 y_pred = clf.predict(X_test)
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.2f}")
 
@@ -28,4 +27,3 @@ plt.show()
 
 importance = pd.Series(clf.feature_importances_, index=X.columns).sort_values(ascending=False)
 print("\nFeature Importance:\n", importance)
-

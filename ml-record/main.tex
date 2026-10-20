@@ -42,21 +42,27 @@
 
 \begin{document}
 
+% ---------------- TITLE PAGE ---------------- %
 \begin{titlepage}
     \centering
     \vspace*{1cm}
+    
     \includegraphics[width=4cm]{college_logo.png} 
+    
     \vspace{1cm}
     {\Large \textbf{COLLEGE OF ENGINEERING TRIVANDRUM}} \\ 
     {\large THIRUVANANTHAPURAM} \\ 
     {\large 695016} \\ 
+    
     \vspace{1.5cm}
     {\large \textbf{DEPARTMENT OF}} \\ 
     {\large \textbf{COMPUTER SCIENCE AND ENGINEERING}} \\ 
-    \vspace{1.5cm}
+    
+    \vspace{2cm}
     {\Large \textbf{PCCSL508: MACHINE LEARNING LAB}} \\ 
     \vspace{0.5cm}
     {\large 2024 Scheme} \\ 
+    
     \vspace{2.5cm}
     \begin{flushleft}
         \large
@@ -65,25 +71,32 @@
         \textbf{Reg. No.} \hspace{0.55cm} : TVE24CS099 \\ 
         \textbf{Semester} \hspace{0.65cm} : S5 \\ 
     \end{flushleft}
+    
     \vfill
     {\large APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY} \\ 
     {\large 2026 -- 2027} 
+    
 \end{titlepage}
 
+% ---------------- CERTIFICATE PAGE ---------------- %
 \newpage
 \begin{center}
     \vspace*{1cm}
     \includegraphics[width=4cm]{college_logo.png} 
+    
     \vspace{0.5cm}
     {\Large \textbf{COLLEGE OF ENGINEERING TRIVANDRUM}} \\ 
     {\large THIRUVANANTHAPURAM} \\ 
     {\large 695016} \\ 
+    
     \vspace{1cm}
     {\large \textbf{DEPARTMENT OF}} \\ 
     {\large \textbf{COMPUTER SCIENCE AND ENGINEERING}} \\ 
+    
     \vspace{1.5cm}
-    {\Large \textbf{PCCSL508: MACHINE LEARNING LAB}} \\ 
+    {\Large \textbf{PCCSL507: MACHINE LEARNING LAB}} \\ 
     {\large Semester V} \\ 
+    
     \vspace{2cm}
     \textbf{\Large CERTIFICATE}
 \end{center}
@@ -126,14 +139,6 @@ Implement linear regression with one variable on the California Housing dataset 
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -187,7 +192,6 @@ print("\nGradient Descent")
 print("MSE:", mean_squared_error(y_test, y_pred))
 print("R2:", r2_score(y_test, y_pred))
 
-
 x_plot = np.linspace(
     X.min(),
     X.max(),
@@ -209,11 +213,18 @@ plt.show()
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Normal Equation
+MSE: 0.7091157771765548
+R2: 0.45885918903846656
+
+Gradient Descent
+MSE: 0.7092291555015888
+R2: 0.45877266771045633
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{outputs/e1_graph.png}
+\end{center}
 \vspace{\baselineskip}
-
 \noindent \textbf{Result:}\\
 Program executed successfully.
 \newpage
@@ -234,14 +245,6 @@ Implement polynomial regression on the Auto MPG dataset to predict miles per gal
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -298,24 +301,40 @@ y_plot = model.predict(x_plot)
 
 plt.scatter(X, y, color="blue")
 plt.plot(x_plot, y_plot, color="red")
-
 plt.xlabel("Displacement")
 plt.ylabel("MPG")
 plt.title("Polynomial Regression")
 plt.show()
-
-
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Linear Regression
+MSE: 20.02462239911002
+R2: 0.651086486847077
+
+Polynomial Degree: 2
+MSE: 16.820029773540593
+R2: 0.7069240276968397
+
+Polynomial Degree: 3
+MSE: 18.117084036570198
+R2: 0.6843238632271342
+
+Polynomial Degree: 4
+MSE: 20.29675981364991
+R2: 0.646344703482828
+
+Polynomial Degree: 5
+MSE: 23.094474938784877
+R2: 0.5975966874825216
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{outputs/e2_graph.png}
+\end{center}
 \vspace{\baselineskip}
-
 \noindent \textbf{Result:}\\
 Program executed successfully.
 \newpage
@@ -336,14 +355,6 @@ Implement Ridge and Lasso regression on the Diabetes dataset and compare the per
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -397,7 +408,17 @@ print("R2:", r2_score(y_test, y_pred))
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Linear Regression
+MSE: 0.05117916885888949
+R2: 0.3447543280602634
+
+Ridge
+MSE: 0.05117914962185567
+R2: 0.3447545743515461
+
+Lasso
+MSE: 0.060143750803308714
+R2: 0.2299810003412156
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -422,14 +443,6 @@ Implement a logistic regression model to predict the likelihood of a disease usi
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -488,15 +501,23 @@ print("Accuracy:", accuracy_score(y_test, y_pred_scaled))
 print("Precision:", precision_score(y_test, y_pred_scaled))
 print("Recall:", recall_score(y_test, y_pred_scaled))
 print("F1 Score:", f1_score(y_test, y_pred_scaled))
-
-
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+WITHOUT FEATURE SCALING
+Accuracy: 0.7467532467532467
+Precision: 0.6379310344827587
+Recall: 0.6727272727272727
+F1 Score: 0.6548672566371682
+
+WITH FEATURE SCALING
+Accuracy: 0.7532467532467533
+Precision: 0.6491228070175439
+Recall: 0.6727272727272727
+F1 Score: 0.6607142857142857
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -521,14 +542,6 @@ Implement a Naïve Bayes classifier to categorize text documents into topics usi
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -580,15 +593,19 @@ y_pred = model.predict(X_test)
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("F1 Score:", f1_score(y_test, y_pred, average="weighted"))
-
-
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+MULTINOMIAL NAIVE BAYES
+Accuracy: 0.6889860617655097
+F1 Score: 0.6898362592680757
+
+BERNOULLI NAIVE BAYES
+Accuracy: 0.565455042361301
+F1 Score: 0.579601996677165
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -613,14 +630,6 @@ Estimate the parameters of a logistic regression model using MLE and MAP on the 
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -673,7 +682,13 @@ print(f"MAP L2 Accuracy: {l2_acc:.2f}%, F1: {l2_f1:.4f}")
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+  warnings.warn(
+MLE Accuracy: 95.91%
+MAP L1 Accuracy: 98.25%, F1: 0.9860
+MAP L2 Accuracy: 98.83%, F1: 0.9907
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -698,112 +713,53 @@ Use MLE and MAP to estimate the parameters of a multinomial distribution on the 
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
 import numpy as np
-
 from sklearn.feature_extraction.text import CountVectorizer
 
 df = pd.read_csv("20newsgroups.csv")
-
 df = df[["text", "target_label"]].dropna()
 
 vectorizer = CountVectorizer()
-
 X = vectorizer.fit_transform(df["text"])
-
 words = vectorizer.get_feature_names_out()
-
 y = df["target_label"].values
-
 classes = np.unique(y)
 
 print("\nMLE")
-
 mle = {}
-
 for c in classes:
-
     X_class = X[y == c]
-
-    word_counts = np.asarray(
-        X_class.sum(axis=0)
-    ).flatten()
-
-    probabilities = (
-        word_counts / word_counts.sum()
-    )
-
+    word_counts = np.asarray(X_class.sum(axis=0)).flatten()
+    probabilities = word_counts / word_counts.sum()
     mle[c] = probabilities
-
 print("MLE estimation completed.")
 
-
 def map_estimation(X_class, alpha):
-
-    word_counts = np.asarray(
-        X_class.sum(axis=0)
-    ).flatten()
-
+    word_counts = np.asarray(X_class.sum(axis=0)).flatten()
     probabilities = word_counts + alpha
-
-    probabilities = (
-        probabilities / probabilities.sum()
-    )
-
+    probabilities = probabilities / probabilities.sum()
     return probabilities
 
-
 print("\nMAP - Alpha = 1")
-
 map_1 = {}
-
 for c in classes:
-
     X_class = X[y == c]
-
-    map_1[c] = map_estimation(
-        X_class,
-        1
-    )
-
+    map_1[c] = map_estimation(X_class, 1)
 
 print("\nMAP - Alpha = 0.1")
-
 map_01 = {}
-
 for c in classes:
-
     X_class = X[y == c]
-
-    map_01[c] = map_estimation(
-        X_class,
-        0.1
-    )
-
+    map_01[c] = map_estimation(X_class, 0.1)
 
 print("\nMAP - Alpha = 10")
-
 map_10 = {}
-
 for c in classes:
-
     X_class = X[y == c]
-
-    map_10[c] = map_estimation(
-        X_class,
-        10
-    )
-
+    map_10[c] = map_estimation(X_class, 10)
 
 def get_top_3(probs, words):
     top_indices = np.argsort(probs)[-3:][::-1]
@@ -811,27 +767,52 @@ def get_top_3(probs, words):
 
 first_class = classes[0]
 print(f"\nTop 3 words for class {first_class}:")
-
 results = {
     "MLE": mle[first_class],
     "MAP (Alpha=1)": map_1[first_class],
     "MAP (Alpha=0.1)": map_01[first_class],
     "MAP (Alpha=10)": map_10[first_class],
 }
-
 for name, probs in results.items():
     print(f"\n{name}:")
     for word, prob in get_top_3(probs, words):
         print(f"{word}: {prob:.6f}")
-
-
 \end{lstlisting}
 
 \vspace{\baselineskip}
-
+\newpage
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+MLE
+MLE estimation completed.
+
+MAP - Alpha = 1
+
+MAP - Alpha = 0.1
+
+MAP - Alpha = 10
+
+Top 3 words for class 0:
+
+MLE:
+the: 0.049970
+of: 0.029574
+to: 0.028463
+
+MAP (Alpha=1):
+the: 0.029853
+of: 0.017670
+to: 0.017006
+
+MAP (Alpha=0.1):
+the: 0.046815
+of: 0.027707
+to: 0.026666
+
+MAP (Alpha=10):
+the: 0.006464
+of: 0.003829
+to: 0.003686
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -856,14 +837,6 @@ Implement the K-Nearest Neighbors (KNN) algorithm for image classification using
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import time
@@ -872,46 +845,56 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
-def run_experiment():
-    df = pd.read_csv('fashion-mnist.csv')
-    
-    X = df.drop('label', axis=1).values / 255.0
-    y = df['label'].values
-    
-    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=5000, test_size=1000, random_state=42, stratify=y)
-    
-    k_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-    results = {}
-    
-    print(f"Evaluating KNN on Fashion MNIST (Train size: {len(X_train)}, Test size: {len(X_test)})")
-    print("-" * 50)
-    
-    for k in k_values:
-        start_time = time.time()
-        knn = KNeighborsClassifier(n_neighbors=k)
-        knn.fit(X_train, y_train)
-        
-        preds = knn.predict(X_test)
-        acc = accuracy_score(y_test, preds)
-        duration = time.time() - start_time
-        
-        results[k] = (acc, duration)
-        print(f"K={k} | Accuracy: {acc:.4f} | Time: {duration:.2f}s")
-    
-    print("-" * 50)
-    best_k = max(results, key=lambda k: results[k][0])
-    print(f"Best K: {best_k} with Accuracy: {results[best_k][0]:.4f}")
+df = pd.read_csv('fashion-mnist.csv')
+X = df.drop('label', axis=1).values / 255.0
+y = df['label'].values
 
-if __name__ == "__main__":
-    run_experiment()
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=5000, test_size=1000, random_state=42, stratify=y)
 
+k_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+results = {}
+
+print(f"Evaluating KNN on Fashion MNIST (Train size: {len(X_train)}, Test size: {len(X_test)})")
+print("-" * 50)
+
+for k in k_values:
+    start_time = time.time()
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(X_train, y_train)
+    
+    preds = knn.predict(X_test)
+    acc = accuracy_score(y_test, preds)
+    duration = time.time() - start_time
+    
+    results[k] = (acc, duration)
+    print(f"K={k} | Accuracy: {acc:.4f} | Time: {duration:.2f}s")
+
+print("-" * 50)
+best_k = max(results, key=lambda k: results[k][0])
+print(f"Best K: {best_k} with Accuracy: {results[best_k][0]:.4f}")
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Evaluating KNN on Fashion MNIST (Train size: 5000, Test size: 1000)
+--------------------------------------------------
+K=1 | Accuracy: 0.7860 | Time: 0.10s
+K=2 | Accuracy: 0.7880 | Time: 0.09s
+K=3 | Accuracy: 0.7940 | Time: 0.08s
+K=4 | Accuracy: 0.7930 | Time: 0.08s
+K=5 | Accuracy: 0.7930 | Time: 0.08s
+K=6 | Accuracy: 0.7930 | Time: 0.08s
+K=7 | Accuracy: 0.7920 | Time: 0.08s
+K=8 | Accuracy: 0.8010 | Time: 0.09s
+K=9 | Accuracy: 0.8000 | Time: 0.09s
+K=10 | Accuracy: 0.7940 | Time: 0.09s
+K=11 | Accuracy: 0.7910 | Time: 0.09s
+K=12 | Accuracy: 0.7960 | Time: 0.09s
+K=13 | Accuracy: 0.7930 | Time: 0.09s
+--------------------------------------------------
+Best K: 8 with Accuracy: 0.8010
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -936,14 +919,6 @@ Implement a Decision Tree classifier using the ID3 algorithm to segment the Iris
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -960,7 +935,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 clf = DecisionTreeClassifier(criterion='entropy', random_state=42)
 clf.fit(X_train, y_train)
-
 y_pred = clf.predict(X_test)
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.2f}")
 
@@ -984,11 +958,19 @@ print("\nFeature Importance:\n", importance)
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Accuracy: 0.98
+
+Feature Importance:
+ petal length (cm)    0.887716
+petal width (cm)     0.061479
+sepal width (cm)     0.038751
+sepal length (cm)    0.012054
+dtype: float64
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{outputs/e9_graph.png}
+\end{center}
 \vspace{\baselineskip}
-
 \noindent \textbf{Result:}\\
 Program executed successfully.
 \newpage
@@ -1009,14 +991,6 @@ Implement a Linear Support Vector Machine (SVM) to classify the Iris dataset and
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1073,11 +1047,15 @@ plt.show()
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Accuracy: 1.00
+Weight vector (w): [-2.2037785   2.28679386]
+Bias (b): 4.6845
+Margin (2/||w||): 0.6298
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{outputs/e10_graph.png}
+\end{center}
 \vspace{\baselineskip}
-
 \noindent \textbf{Result:}\\
 Program executed successfully.
 \newpage
@@ -1098,14 +1076,6 @@ Compare the performance of SVM classifiers with linear, polynomial, and RBF kern
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1151,7 +1121,17 @@ for k, v in results.items():
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Training SVM with linear kernel...
+linear accuracy: 0.80
+Training SVM with poly kernel (degree=3)...
+poly accuracy: 0.84
+Training SVM with rbf kernel...
+rbf accuracy: 0.87
+
+Comparison Summary:
+linear: 0.80
+poly: 0.84
+rbf: 0.87
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -1176,14 +1156,6 @@ Implement and train a Multilayer Feed-Forward Network (MLP) on the Wine Quality 
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1215,15 +1187,15 @@ for arch in architectures:
     mlp.fit(X_train_scaled, y_train)
     y_pred = mlp.predict(X_test_scaled)
     print(f"Architecture {arch}: Accuracy = {accuracy_score(y_test, y_pred):.4f}")
-
-
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Architecture (100,): Accuracy = 0.6156
+Architecture (100, 50): Accuracy = 0.6406
+Architecture (100, 50, 30): Accuracy = 0.6500
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -1248,14 +1220,6 @@ Compare the performance of a neural network using different activation functions
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1264,26 +1228,29 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-def run_experiment():
-    df = pd.read_csv('mnist.csv')
-    X = df.drop('class', axis=1) / 255.0
-    y = df['class']
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
+df = pd.read_csv('mnist.csv')
+X = df.drop('class', axis=1) / 255.0
+y = df['class']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
 
-    for act in ['logistic', 'relu', 'tanh']:
-        mlp = MLPClassifier(activation=act, max_iter=5).fit(X_train, y_train)
-        print(f"Act {act} Accuracy: {accuracy_score(y_test, mlp.predict(X_test)):.4f}")
-
-if __name__ == "__main__":
-    run_experiment()
-
+for act in ['logistic', 'relu', 'tanh']:
+    mlp = MLPClassifier(activation=act, max_iter=5).fit(X_train, y_train)
+    print(f"Act {act} Accuracy: {accuracy_score(y_test, mlp.predict(X_test)):.4f}")
 \end{lstlisting}
 
 \vspace{\baselineskip}
-
+\newpage
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (5) reached and the optimization hasn't converged yet.
+  warnings.warn(
+Act logistic Accuracy: 0.9343
+Act relu Accuracy: 0.9589
+Act tanh Accuracy: 0.9528
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -1308,14 +1275,6 @@ Compare hierarchical (agglomerative) and partitional (K-means) clustering algori
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1324,48 +1283,46 @@ from sklearn.cluster import KMeans, AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
 
-def run_experiment():
-    df = pd.read_csv('mall_customers.csv')
-    X = df[['Annual Income (k$)', 'Spending Score (1-100)']]
-    X_scaled = StandardScaler().fit_transform(X)
+df = pd.read_csv('mall_customers.csv')
+X = df[['Annual Income (k$)', 'Spending Score (1-100)']]
+X_scaled = StandardScaler().fit_transform(X)
 
-    # K-means
-    km = KMeans(n_clusters=5, n_init='auto').fit(X_scaled)
-    # Hierarchical
-    hc = AgglomerativeClustering(n_clusters=5).fit(X_scaled)
+# K-means
+km = KMeans(n_clusters=5, n_init='auto').fit(X_scaled)
+# Hierarchical
+hc = AgglomerativeClustering(n_clusters=5).fit(X_scaled)
 
-    print(f"K-means Silhouette: {silhouette_score(X_scaled, km.labels_):.5f}")
-    print(f"Hierarchical Silhouette: {silhouette_score(X_scaled, hc.labels_):.5f}")
+print(f"K-means Silhouette: {silhouette_score(X_scaled, km.labels_):.5f}")
+print(f"Hierarchical Silhouette: {silhouette_score(X_scaled, hc.labels_):.5f}")
 
-    plt.figure(figsize=(12, 5))
-    plt.subplot(1, 2, 1)
-    plt.scatter(X_scaled[:, 0], X_scaled[:, 1], c=km.labels_, cmap='viridis')
-    plt.title('K-means Clustering')
-    plt.xlabel('Annual Income (scaled)')
-    plt.ylabel('Spending Score (scaled)')
+plt.figure(figsize=(12, 5))
+plt.subplot(1, 2, 1)
+plt.scatter(X_scaled[:, 0], X_scaled[:, 1], c=km.labels_, cmap='viridis')
+plt.title('K-means Clustering')
+plt.xlabel('Annual Income (scaled)')
+plt.ylabel('Spending Score (scaled)')
 
-    plt.subplot(1, 2, 2)
-    plt.scatter(X_scaled[:, 0], X_scaled[:, 1], c=hc.labels_, cmap='viridis')
-    plt.title('Hierarchical Clustering')
-    plt.xlabel('Annual Income (scaled)')
-    plt.ylabel('Spending Score (scaled)')
+plt.subplot(1, 2, 2)
+plt.scatter(X_scaled[:, 0], X_scaled[:, 1], c=hc.labels_, cmap='viridis')
+plt.title('Hierarchical Clustering')
+plt.xlabel('Annual Income (scaled)')
+plt.ylabel('Spending Score (scaled)')
     
-    plt.tight_layout()
-    plt.show()
-if __name__ == "__main__":
-    run_experiment()
-
+plt.tight_layout()
+plt.show()
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+K-means Silhouette: 0.55466
+Hierarchical Silhouette: 0.55381
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=1\textwidth]{outputs/e14_graph.png}
+\end{center}
 \vspace{\baselineskip}
-
 \noindent \textbf{Result:}\\
 Program executed successfully.
 \newpage
@@ -1386,14 +1343,6 @@ Apply K-means clustering to the Digits dataset and analyze how the choice of K a
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1402,53 +1351,62 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
 
-def run_experiment():
-    df = pd.read_csv('digits.csv')
-    X = df.drop('target', axis=1)
-    X = StandardScaler().fit_transform(X)
-    
-    inertias = []
-    silhouettes = []
-    ks = range(2, 16)
-    
-    for k in ks:
-        km = KMeans(n_clusters=k, n_init='auto').fit(X)
-        inertia = km.inertia_
-        sil = silhouette_score(X, km.labels_)
-        inertias.append(inertia)
-        silhouettes.append(sil)
-        print(f"K={k} Inertia: {inertia:.4f}, Silhouette: {sil:.4f}")
-    
-    plt.figure(figsize=(12, 5))
-    plt.subplot(1, 2, 1)
-    plt.plot(ks, inertias, 'bo-')
-    plt.title('Elbow Method')
-    plt.xlabel('K')
-    plt.ylabel('Inertia')
-    
-    plt.subplot(1, 2, 2)
-    plt.plot(ks, silhouettes, 'ro-')
-    plt.title('Silhouette Scores')
-    plt.xlabel('K')
-    plt.ylabel('Silhouette Score')
-    
-    plt.tight_layout()
-    plt.show()
+df = pd.read_csv('digits.csv')
+X = df.drop('target', axis=1)
+X = StandardScaler().fit_transform(X)
 
-if __name__ == "__main__":
-    run_experiment()
+inertias = []
+silhouettes = []
+ks = range(2, 16)
 
+for k in ks:
+    km = KMeans(n_clusters=k, n_init='auto').fit(X)
+    inertia = km.inertia_
+    sil = silhouette_score(X, km.labels_)
+    inertias.append(inertia)
+    silhouettes.append(sil)
+    print(f"K={k} Inertia: {inertia:.4f}, Silhouette: {sil:.4f}")
+
+plt.figure(figsize=(12, 5))
+plt.subplot(1, 2, 1)
+plt.plot(ks, inertias, 'bo-')
+plt.title('Elbow Method')
+plt.xlabel('K')
+plt.ylabel('Inertia')
+
+plt.subplot(1, 2, 2)
+plt.plot(ks, silhouettes, 'ro-')
+plt.title('Silhouette Scores')
+plt.xlabel('K')
+plt.ylabel('Silhouette Score')
+
+plt.tight_layout()
+plt.show()
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+K=2 Inertia: 100429.1970, Silhouette: 0.1052
+K=3 Inertia: 95255.3746, Silhouette: 0.0993
+K=4 Inertia: 89421.7744, Silhouette: 0.1008
+K=5 Inertia: 85536.4406, Silhouette: 0.0816
+K=6 Inertia: 83226.3364, Silhouette: 0.0854
+K=7 Inertia: 78368.5778, Silhouette: 0.1118
+K=8 Inertia: 75677.2536, Silhouette: 0.1283
+K=9 Inertia: 73081.9529, Silhouette: 0.1352
+K=10 Inertia: 73573.3454, Silhouette: 0.1123
+K=11 Inertia: 67289.6074, Silhouette: 0.1496
+K=12 Inertia: 68480.9965, Silhouette: 0.1221
+K=13 Inertia: 66140.4314, Silhouette: 0.1269
+K=14 Inertia: 62634.9918, Silhouette: 0.1473
+K=15 Inertia: 61525.1256, Silhouette: 0.1415
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{outputs/e15_graph.png}
+\end{center}
 \vspace{\baselineskip}
-
 \noindent \textbf{Result:}\\
 Program executed successfully.
 \newpage
@@ -1469,14 +1427,6 @@ Implement bootstrapping and cross-validation on the Iris dataset and compare the
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1487,44 +1437,42 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
-def run_experiment():
-    df = pd.read_csv('iris.csv')
-    X = df.drop('species', axis=1)
-    y = df['species']
+df = pd.read_csv('iris.csv')
+X = df.drop('species', axis=1)
+y = df['species']
 
-    scaler = StandardScaler()
-    X = scaler.fit_transform(X)
-    X = pd.DataFrame(X, columns=df.drop('species', axis=1).columns)
+scaler = StandardScaler()
+X = scaler.fit_transform(X)
+X = pd.DataFrame(X, columns=df.drop('species', axis=1).columns)
 
-    # K-Fold Cross Validation
-    cv_results = cross_validate(RandomForestClassifier(), X, y, cv=5, scoring=['accuracy', 'f1_macro'])
-    print(f"CV Accuracy: {np.mean(cv_results['test_accuracy']):.4f} (+/- {np.std(cv_results['test_accuracy']):.4f})")
-    print(f"CV F1 Score: {np.mean(cv_results['test_f1_macro']):.4f} (+/- {np.std(cv_results['test_f1_macro']):.4f})")
+# K-Fold Cross Validation
+cv_results = cross_validate(RandomForestClassifier(), X, y, cv=5, scoring=['accuracy', 'f1_macro'])
+print(f"CV Accuracy: {np.mean(cv_results['test_accuracy']):.4f} (+/- {np.std(cv_results['test_accuracy']):.4f})")
+print(f"CV F1 Score: {np.mean(cv_results['test_f1_macro']):.4f} (+/- {np.std(cv_results['test_f1_macro']):.4f})")
 
-    # Bootstrapping
-    boot_acc, boot_f1 = [], []
-    for _ in range(150):
-        idx = np.random.choice(len(X), len(X), replace=True)
-        X_b, y_b = X.iloc[idx], y.iloc[idx]
-        X_train, X_test, y_train, y_test = train_test_split(X_b, y_b, test_size=0.2)
-        model = RandomForestClassifier().fit(X_train, y_train)
-        preds = model.predict(X_test)
-        boot_acc.append(accuracy_score(y_test, preds))
-        boot_f1.append(f1_score(y_test, preds, average='macro'))
-    
-    print(f"Bootstrapping Accuracy: {np.mean(boot_acc):.4f} (+/- {np.std(boot_acc):.4f})")
-    print(f"Bootstrapping F1 Score: {np.mean(boot_f1):.4f} (+/- {np.std(boot_f1):.4f})")
+# Bootstrapping
+boot_acc, boot_f1 = [], []
+for _ in range(150):
+    idx = np.random.choice(len(X), len(X), replace=True)
+    X_b, y_b = X.iloc[idx], y.iloc[idx]
+    X_train, X_test, y_train, y_test = train_test_split(X_b, y_b, test_size=0.2)
+    model = RandomForestClassifier().fit(X_train, y_train)
+    preds = model.predict(X_test)
+    boot_acc.append(accuracy_score(y_test, preds))
+    boot_f1.append(f1_score(y_test, preds, average='macro'))
 
-if __name__ == "__main__":
-    run_experiment()
-
+print(f"Bootstrapping Accuracy: {np.mean(boot_acc):.4f} (+/- {np.std(boot_acc):.4f})")
+print(f"Bootstrapping F1 Score: {np.mean(boot_f1):.4f} (+/- {np.std(boot_f1):.4f})")
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+CV Accuracy: 0.9667 (+/- 0.0211)
+CV F1 Score: 0.9665 (+/- 0.0213)
+Bootstrapping Accuracy: 0.9782 (+/- 0.0272)
+Bootstrapping F1 Score: 0.9769 (+/- 0.0287)
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -1549,14 +1497,6 @@ Implement bagging and boosting ensemble methods on the Titanic dataset and compa
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1566,34 +1506,30 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
-def run_experiment():
-    df = pd.read_csv('titanic.csv')
-    # Simple preprocessing
-    df = df[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Survived']].dropna()
-    df['Sex'] = LabelEncoder().fit_transform(df['Sex'])
-    
-    X = df.drop('Survived', axis=1)
-    y = df['Survived']
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+df = pd.read_csv('titanic.csv')
+# Simple preprocessing
+df = df[['Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Survived']].dropna()
+df['Sex'] = LabelEncoder().fit_transform(df['Sex'])
 
-    # Bagging
-    bag = BaggingClassifier(estimator=DecisionTreeClassifier()).fit(X_train, y_train)
-    # Boosting
-    boost = AdaBoostClassifier().fit(X_train, y_train)
+X = df.drop('Survived', axis=1)
+y = df['Survived']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    print(f"Bagging Accuracy: {accuracy_score(y_test, bag.predict(X_test)):.2f}")
-    print(f"Boosting Accuracy: {accuracy_score(y_test, boost.predict(X_test)):.2f}")
+# Bagging
+bag = BaggingClassifier(estimator=DecisionTreeClassifier()).fit(X_train, y_train)
+# Boosting
+boost = AdaBoostClassifier().fit(X_train, y_train)
 
-if __name__ == "__main__":
-    run_experiment()
-
+print(f"Bagging Accuracy: {accuracy_score(y_test, bag.predict(X_test)):.2f}")
+print(f"Boosting Accuracy: {accuracy_score(y_test, boost.predict(X_test)):.2f}")
 \end{lstlisting}
 
 \vspace{\baselineskip}
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+Bagging Accuracy: 0.76
+Boosting Accuracy: 0.74
 \end{lstlisting}
 
 \vspace{\baselineskip}
@@ -1618,14 +1554,6 @@ Investigate the bias-variance tradeoff using polynomial regression on the Boston
 \end{itemize}
 
 \vspace{\baselineskip}
-
-
-\vspace{\baselineskip}
-
-
-
-
-
 \noindent \textbf{Code:}\\
 \begin{lstlisting}
 import pandas as pd
@@ -1657,20 +1585,21 @@ def run_experiment(df, features, title):
     
     return train_err, val_err
 
-if __name__ == "__main__":
-    df = pd.read_csv('boston_housing.csv')
-    
-    t1, v1 = run_experiment(df, ['rm'], "1 Feature ('rm')")
-    
-    plt.figure()
-    plt.plot(range(1, 9), t1, label='Train')
-    plt.plot(range(1, 9), v1, label='Val')
-    plt.xlabel('Degree')
-    plt.ylabel('MSE')
-    plt.yscale('log')
-    plt.legend()
-    plt.title('Bias-Variance Tradeoff: 1 Feature')
-    plt.show()
+
+
+df = pd.read_csv('boston_housing.csv')
+
+t1, v1 = run_experiment(df, ['rm'], "1 Feature ('rm')")
+
+plt.figure()
+plt.plot(range(1, 9), t1, label='Train')
+plt.plot(range(1, 9), v1, label='Val')
+plt.xlabel('Degree')
+plt.ylabel('MSE')
+plt.yscale('log')
+plt.legend()
+plt.title('Bias-Variance Tradeoff: 1 Feature')
+plt.show()
 
 \end{lstlisting}
 
@@ -1678,12 +1607,24 @@ if __name__ == "__main__":
 
 \noindent \textbf{Output:}\\
 \begin{lstlisting}[style=terminal]
-% Output will be added here
+--- 1 Feature ('rm') ---
+Degree    Train Error         Val Error           
+1         42.9966             46.1448             
+2         38.9079             35.3698             
+3         37.7344             34.4452             
+4         35.8886             39.5780             
+5         35.1459             32.5148             
+6         34.9966             35.6278             
+7         34.9829             38.8950             
+8         34.9664             34.6971             
 \end{lstlisting}
-
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{outputs/e18_graph.png}
+\end{center}
 \vspace{\baselineskip}
 
 \noindent \textbf{Result:}\\
 Program executed successfully.
 
 \end{document}
+

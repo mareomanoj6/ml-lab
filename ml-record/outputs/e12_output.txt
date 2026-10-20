@@ -1,0 +1,3 @@
+Architecture (100,): Accuracy = 0.6156
+Architecture (100, 50): Accuracy = 0.6406
+Architecture (100, 50, 30): Accuracy = 0.6500

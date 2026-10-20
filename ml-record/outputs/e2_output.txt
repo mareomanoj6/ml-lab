@@ -1,0 +1,22 @@
+/home/icarus/coding-projects/ml-lab/venv/lib/python3.14/site-packages/sklearn/utils/validation.py:2830: UserWarning: X does not have valid feature names, but PolynomialFeatures was fitted with feature names
+  warnings.warn(
+
+Linear Regression
+MSE: 20.02462239911002
+R2: 0.651086486847077
+
+Polynomial Degree: 2
+MSE: 16.820029773540593
+R2: 0.7069240276968397
+
+Polynomial Degree: 3
+MSE: 18.117084036570198
+R2: 0.6843238632271342
+
+Polynomial Degree: 4
+MSE: 20.29675981364991
+R2: 0.646344703482828
+
+Polynomial Degree: 5
+MSE: 23.094474938784877
+R2: 0.5975966874825216

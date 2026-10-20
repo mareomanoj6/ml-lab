@@ -27,17 +27,18 @@ def run_experiment(df, features, title):
     
     return train_err, val_err
 
-if __name__ == "__main__":
-    df = pd.read_csv('boston_housing.csv')
-    
-    t1, v1 = run_experiment(df, ['rm'], "1 Feature ('rm')")
-    
-    plt.figure()
-    plt.plot(range(1, 9), t1, label='Train')
-    plt.plot(range(1, 9), v1, label='Val')
-    plt.xlabel('Degree')
-    plt.ylabel('MSE')
-    plt.yscale('log')
-    plt.legend()
-    plt.title('Bias-Variance Tradeoff: 1 Feature')
-    plt.show()
+
+
+df = pd.read_csv('boston_housing.csv')
+
+t1, v1 = run_experiment(df, ['rm'], "1 Feature ('rm')")
+
+plt.figure()
+plt.plot(range(1, 9), t1, label='Train')
+plt.plot(range(1, 9), v1, label='Val')
+plt.xlabel('Degree')
+plt.ylabel('MSE')
+plt.yscale('log')
+plt.legend()
+plt.title('Bias-Variance Tradeoff: 1 Feature')
+plt.show()

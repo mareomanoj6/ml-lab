@@ -1,0 +1,14 @@
+K=2 Inertia: 100429.1970, Silhouette: 0.1052
+K=3 Inertia: 95255.3746, Silhouette: 0.0993
+K=4 Inertia: 89421.7744, Silhouette: 0.1008
+K=5 Inertia: 85536.4406, Silhouette: 0.0816
+K=6 Inertia: 83226.3364, Silhouette: 0.0854
+K=7 Inertia: 78368.5778, Silhouette: 0.1118
+K=8 Inertia: 75677.2536, Silhouette: 0.1283
+K=9 Inertia: 73081.9529, Silhouette: 0.1352
+K=10 Inertia: 73573.3454, Silhouette: 0.1123
+K=11 Inertia: 67289.6074, Silhouette: 0.1496
+K=12 Inertia: 68480.9965, Silhouette: 0.1221
+K=13 Inertia: 66140.4314, Silhouette: 0.1269
+K=14 Inertia: 62634.9918, Silhouette: 0.1473
+K=15 Inertia: 61525.1256, Silhouette: 0.1415

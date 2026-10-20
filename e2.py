@@ -52,9 +52,7 @@ y_plot = model.predict(x_plot)
 
 plt.scatter(X, y, color="blue")
 plt.plot(x_plot, y_plot, color="red")
-
 plt.xlabel("Displacement")
 plt.ylabel("MPG")
 plt.title("Polynomial Regression")
 plt.show()
-
