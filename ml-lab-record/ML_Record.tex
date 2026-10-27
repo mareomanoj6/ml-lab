@@ -4,10 +4,10 @@
 \usepackage{float}
 \usepackage{enumerate}
 
-\usepackage{listings}
 
 \usepackage[a4paper,left=3cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 
+\usepackage{listings}
 \usepackage{xcolor}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -37,16 +37,148 @@
 
 \usepackage[hidelinks]{hyperref}
 
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+
 \date{} 
 
-\begin{document} \pagenumbering{arabic}
+\begin{document} \pagenumbering{gobble}
+\newgeometry{left=2cm,right=2cm,top=2.5cm,bottom=2.5cm}
+
+\begin{titlepage}
+	\centering 
+	{\Large \bfseries COLLEGE OF ENGINEERING TRIVANDRUM \par}
+	
+	{\large \bfseries THIRUVANANTHAPURAM -- 695016 \par}
+	
+	\vspace{1.5cm}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{"../Auxiliary Files/logo"}
+	\end{figure}
+	
+	\vspace{1.5cm}
+	
+	{\LARGE \bfseries DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING \par}
+	
+	\vspace{1.5cm}
+	
+	{\large \bfseries Fifth Semester\par}
+	
+	{\Large \bfseries PCCSL508: MACHINE LEARNING LAB\par}
+	
+	\begin{table}[H]
+		\centering \Large 
+		\begin{tabular}{c c c}
+			Name & : & Woitiwe Simson \\
+			KTU ID & : & TVE24CS140 \\ 
+		\end{tabular}
+	\end{table}
+	
+	\vspace{2cm}
+	
+	{\Large \bfseries APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY \par}
+	{\large \bfseries 2026-2027\par}
+	
+\end{titlepage}
+
+\restoregeometry
+
+{\centering \Large \bfseries COLLEGE OF ENGINEERING TRIVANDRUM \par}
+
+{\centering \large \bfseries THIRUVANANTHAPURAM -- 695016 \par}
+
+\vspace{1.5cm}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"../Auxiliary Files/logo"}
+\end{figure}
+
+\vspace{1cm}
+
+{\centering \LARGE \bfseries DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING \par}
+
+\vspace{1.5cm}
+
+{\centering \large \bfseries Fifth Semester\par}
+
+{\centering \Large \bfseries PCCSL508: MACHINE LEARNING LAB\par}
+
+\vspace{1.5cm}
 
 \begin{center}
+	\large
+	Certified that this is a bonafide record of work done by Woitiwe Simson (TVE24CS140) of S5 CSE (Batch-2) class in the Machine Learning Lab during the year 2026-2027.
+\end{center}
+
+\vspace{3.5cm}
+
+\begin{center}
+	External Examiner \hfill Faculty Member in charge
+\end{center}
+
+\newpage
+\chapter*{Contents}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	
+	\begin{tabularx}{\textwidth}{@{}|c |X |c|@{}}
+		\hline 
+		\textbf{Si.No.} & \textbf{Experiment Title} & \textbf{Page Number} \\
+		\hline 
+		1  & Linear Regression & \pageref{exp:1} \\
+		\hline 
+		2  & Polynomial Regression & \pageref{exp:2} \\
+		\hline 
+		3  & Ridge and Lasso Regression & \pageref{exp:3} \\
+		\hline 
+		4  & Logistic Regression & \pageref{exp:4} \\
+		\hline 
+		5  & Naive Bayes Classifier & \pageref{exp:5} \\
+		\hline 
+		6  & Logistic Regression with Regularization & \pageref{exp:6} \\
+		\hline 
+		7  & MLE and MAP & \pageref{exp:7} \\
+		\hline 
+		8  & K-Nearest Neighbors & \pageref{exp:8} \\
+		\hline 
+		9  & Decision Tree using ID3 & \pageref{exp:9} \\
+		\hline 
+		10 & Support Vector Machines & \pageref{exp:10} \\
+		\hline 
+		11 & SVM Kernels & \pageref{exp:11} \\
+		\hline 
+		12 & Multilayer Feed-Forward Networks & \pageref{exp:12} \\
+		\hline 
+		13 & Neural Networks & \pageref{exp:13} \\
+		\hline 
+		14 & Hierarchical and Partitional Clustering & \pageref{exp:14} \\
+		\hline 
+		15 & K-Means Clustering & \pageref{exp:15} \\
+		\hline 
+		16 & Bootstrapping and Cross-Validation & \pageref{exp:16} \\
+		\hline 
+		17 & Bagging and Boosting & \pageref{exp:17} \\
+		\hline 
+		18 & Bias-Variance Tradeoff & \pageref{exp:18} \\
+		\hline 
+	\end{tabularx}
+\end{table}
+
+
+\newpage 
+
+\begin{center} \pagenumbering{arabic}
 	\bfseries 
 	Experiment 1 \hfill Date: 16/07/2026
 \end{center}
 
-
+\label{exp:1}
 \begin{center}
 {\bfseries \Huge Linear Regression}	
 \end{center}
@@ -110,7 +242,7 @@ Equation, and the fitted regression line was also obtained
 	Experiment 2 \hfill Date: 16/07/2026
 \end{center}
 
-
+\label{exp:2}
 \begin{center}
 	{\bfseries \Huge Polynomial Regression}	
 \end{center}
@@ -172,7 +304,7 @@ Successfully implemented polynomial regression and compared it with linear regre
 	Experiment 3 \hfill Date: 04/08/2026 
 \end{center}
 
-
+\label{exp:3}
 \begin{center}
 	{\bfseries \Huge Ridge and Lasso Regression}	
 \end{center}
@@ -223,7 +355,7 @@ Successfully implemented ridge and lasso regressions on the diabetes dataset.
 	Experiment 4 \hfill Date: 04/08/2026
 \end{center}
 
-
+\label{exp:4}
 \begin{center}
 	{\bfseries \Huge Logistic Regression}	
 \end{center}
@@ -273,7 +405,7 @@ Successfully implemented logistic regression on the Pima Indian diabetes dataset
 	Experiment 5 \hfill Date: 13/08/2026
 \end{center}
 
-
+\label{exp:5}
 \begin{center}
 	{\bfseries \Huge Naive Bayes Classifier}	
 \end{center}
@@ -325,7 +457,7 @@ Successfully implemented a Naive Bayes classifier on the 20 News Groups dataset 
 	Experiment 6 \hfill Date: 13/08/2026
 \end{center}
 
-
+\label{exp:6}
 \begin{center}
 	{\bfseries \Huge Logistic Regression With Regularization}	
 \end{center}
@@ -375,7 +507,7 @@ Successfully estimated data with MLE, L1, and L2 priors with logistic regression
 	Experiment 7 \hfill Date: 13/08/2026
 \end{center}
 
-
+\label{exp:7}
 \begin{center}
 	{\bfseries \Huge MLE and MAP}	
 \end{center}
@@ -442,7 +574,7 @@ Successfully implemented MLE and MAP on the 20 News Groups dataset and compared 
 	Experiment 8 \hfill Date: 01/09/2026
 \end{center}
 
-
+\label{exp:8}
 \begin{center}
 	{\bfseries \Huge K Nearest Neighbors}	
 \end{center}
@@ -496,9 +628,9 @@ Successfully implemented KNN on the Fashion MNIST dataset and compared different
 	Experiment 9 \hfill Date: 01/09/2026
 \end{center}
 
-
+\label{exp:9}
 \begin{center}
-	{\bfseries \Huge Iterative Dichotomiser 3 Algorithm}	
+	{\bfseries \Huge Decision Tree using ID3}	
 \end{center}
 
 \section*{Aim} 
@@ -553,7 +685,7 @@ Successfully implemented the ID3 algorithm on the Iris dataset.
 	Experiment 10 \hfill Date: 08/09/2026
 \end{center}
 
-
+\label{exp:10}
 \begin{center}
 	{\bfseries \Huge Support Vector Machines}	
 \end{center}
@@ -603,7 +735,7 @@ Successfully classified data into setosa and non-setosa classes using a linear S
 	Experiment 11 \hfill Date: 15/09/2026
 \end{center}
 
-
+\label{exp:11}
 \begin{center}
 	{\bfseries \Huge SVM Kernels}	
 \end{center}
@@ -658,7 +790,7 @@ Successfully implemented support vector machines with linear, polynomial (degree
 	Experiment 12 \hfill Date: 15/09/2026
 \end{center}
 
-
+\label{exp:12}
 \begin{center}
 	{\bfseries \Huge Multilayer Feed-Forward Networks}	
 \end{center}
@@ -712,7 +844,7 @@ Successfully implemented multilayer feed-forward networks on the Wine Quality da
 	Experiment 13 \hfill Date: 15/09/2026
 \end{center}
 
-
+\label{exp:13}
 \begin{center}
 	{\bfseries \Huge Neural Networks}	
 \end{center}
@@ -769,7 +901,7 @@ Successfully implemented and compared the performances of neural networks with S
 	Experiment 14 \hfill Date: 24/09/2026
 \end{center}
 
-
+\label{exp:14}
 \begin{center}
 	{\bfseries \Huge Hierarchical and Partitional Clustering}	
 \end{center}
@@ -828,7 +960,7 @@ Successfully implemented partitional (K Means) and hierarchical (agglomerative) 
 	Experiment 15 \hfill Date:  24/09/2026
 \end{center}
 
-
+\label{exp:15}
 \begin{center}
 	{\bfseries \Huge K-Means Clustering}	
 \end{center}
@@ -884,7 +1016,7 @@ Successfully implemented K-means clustering on the digits dataset and compared p
 	Experiment 16 \hfill Date:  24/09/2026
 \end{center}
 
-
+\label{exp:16}
 \begin{center}
 	{\bfseries \Huge Bootstrapping and Cross-Validation}	
 \end{center}
@@ -939,7 +1071,7 @@ Successfully implemented bootstrapping and cross-validation (5-fold) on the Iris
 	Experiment 17 \hfill Date:  24/09/2026
 \end{center}
 
-
+\label{exp:17}
 \begin{center}
 	{\bfseries \Huge Bagging and Boosting}	
 \end{center}
@@ -989,7 +1121,7 @@ Successfully implemented bagging and boosting on the Titanic dataset.
 	Experiment 18 \hfill Date:  24/09/2026
 \end{center}
 
-
+\label{exp:18}
 \begin{center}
 	{\bfseries \Huge Bias-Variance Tradeoff}	
 \end{center}
