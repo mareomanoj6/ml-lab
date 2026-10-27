@@ -1,4 +1,0 @@
-Accuracy: 1.00
-Weight vector (w): [-2.2037785   2.28679386]
-Bias (b): 4.6845
-Margin (2/||w||): 0.6298

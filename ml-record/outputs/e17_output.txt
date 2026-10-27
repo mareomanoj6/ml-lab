@@ -1,2 +1,0 @@
-Bagging Accuracy: 0.76
-Boosting Accuracy: 0.74

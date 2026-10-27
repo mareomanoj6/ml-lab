@@ -1,8 +1,0 @@
-Accuracy: 0.98
-
-Feature Importance:
- petal length (cm)    0.887716
-petal width (cm)     0.061479
-sepal width (cm)     0.038751
-sepal length (cm)    0.012054
-dtype: float64

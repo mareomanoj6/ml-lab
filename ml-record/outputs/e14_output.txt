@@ -1,2 +1,0 @@
-K-means Silhouette: 0.55466
-Hierarchical Silhouette: 0.55381
